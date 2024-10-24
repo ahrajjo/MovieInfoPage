@@ -249,3 +249,4 @@ bookmarkReverseBtn.addEventListener("click", (e) => {
 
 # MovieIntroducePage
 # MovieInfoPage
+# MovieInfoPage
