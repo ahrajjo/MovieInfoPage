@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화 검색</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="bookmark.css" />
+  </head>
+  <body>
+    <h1 class="title">인기 영화 목록</h1>
+    <!--검색창 만들기-->
+    <div class="search">
+      <form class="search-box" id="search" method="get">
+        <input
+          class="search-txt"
+          type="text"
+          placeholder="찾을 영화 제목을 입력해주세요"
+        />
+        <button class="search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </div>
+    <!--북마크 만들기-->
+    <div class="bookmarks">
+      <button id="bookmark-btn">
+        <i class="fa-solid fa-book-bookmark"></i> 북마크
+      </button>
+      <button id="bookmark-reverse">
+        <i class="fa-solid fa-book-bookmark"></i> 돌아가기
+      </button>
+    </div>
+    <div id="bookmark-list" style="display: none"></div>
+
+    <div id="movie-container"></div>
+    <!--모달창 만들기-->
+    <div id="movie-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="modal-poster" src="" alt="Movie Poster" />
+        <h2 id="modal-title"></h2>
+        <p id="modal-rating"></p>
+        <p id="modal-release-date"></p>
+        <p id="modal-overview"></p>
+        <button class="bookmark-add">
+          <i class="fa-solid fa-heart"></i> 북마크 추가
+        </button>
+        <button class="bookmark-remove">
+          <i class="fa-solid fa-heart"></i> 북마크 제거
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/eaab738154.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="api.js"></script>
+    <script src="search.js"></script>
+    <script src="modal.js"></script>
+    <script src="bookmark.js"></script>
+  </body>
+</html>
